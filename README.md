@@ -1,9 +1,9 @@
 # Spearman's Footrule Fair Rank Aggregation
 
 # Files
-The file `fair-ra.py` contains all four implemented algorithms for fair rank aggregation under Spearman's footrule distance.
+The file `fair-ra.py` contains implementations for the optimal (ILP), our algorithm in the paper, and the 3-approximation from (Chakraborty et. al 2022) for fair rank aggregation under Spearman's footrule distance.
 
-The file `fair-ra-ktobj.py` contains our algorithm, KT and BFI for fair rank aggregation under Kendall's tau distance.
+The file `fair-kt.py` contains the implementation of the fair rank aggregation under Kendall-tau distance used as the baseline KT. 
 
 Football datasets are located in the folder `football`, with `week1.in` to `week16.in` as the 16 separate problem instances and movielens datasets are in `Movielens` as `movielens.in`.
 
@@ -17,6 +17,6 @@ You will need numpy, gurobipy, scipy and a gurobi license to run the programs; W
 
 `fair-ra.py` reads from standard input. For example, to run it with the Movielens dataset, use `python fair-ra.py < football\week1.in`.
 
-The same holds for `fair-ra-ktobj.py`.
+The same holds for `fair-kt.py`.
 
-To adjust the parameters, i.e. $k, n, d$, one can directly manipulate the code to set the variables K, NUM_RANKINGS or DIM respectively (see in the code for examples), or change the input files.
+To adjust the parameters, i.e. $k, n, d$, one can directly manipulate the code to set the variables K, NUM_RANKINGS or DIM respectively (see in the code for examples), or run some preprocessing to modify the input files.
